@@ -1,0 +1,27 @@
+
+# pescha201.my_getting_started_4.my_service.data.Temperature
+pescha201.my_getting_started_4.my_service.data.Temperature#concept.documentation = 
+pescha201.my_getting_started_4.my_service.data.Temperature#concept.label = temperature
+pescha201.my_getting_started_4.my_service.data.Temperature.cold#instance.label = cold
+pescha201.my_getting_started_4.my_service.data.Temperature.hot#instance.label = hot
+pescha201.my_getting_started_4.my_service.data.Temperature.warm#instance.label = warm
+
+# pescha201.my_getting_started_4.my_service.data.Weather
+pescha201.my_getting_started_4.my_service.data.Weather#concept.label = weather
+pescha201.my_getting_started_4.my_service.data.Weather.Weather(java.lang.String,long,boolean,pescha201.my_getting_started_4.my_service.data.Temperature)#phrase.navigation = a new {weather} where {0, storm} {1, rain forecast} {2, storm alert} {3, temperature}
+pescha201.my_getting_started_4.my_service.data.Weather.rainForecast#phrase.action = set the rain forecast of {this} to {rain forecast}
+pescha201.my_getting_started_4.my_service.data.Weather.rainForecast#phrase.addition_setter = add {rain forecast} to the rain forecast of {this}
+pescha201.my_getting_started_4.my_service.data.Weather.rainForecast#phrase.navigation = {rain forecast} of {this}
+pescha201.my_getting_started_4.my_service.data.Weather.rainForecast#phrase.subtraction_setter = subtract {rain forecast} from the rain forecast of {this}
+pescha201.my_getting_started_4.my_service.data.Weather.storm#phrase.action = set the storm of {this} to {storm }
+pescha201.my_getting_started_4.my_service.data.Weather.storm#phrase.navigation = {storm } of {this}
+pescha201.my_getting_started_4.my_service.data.Weather.stormAlert#phrase.action[0] = {this} gets storm alert only if {storm alert}
+pescha201.my_getting_started_4.my_service.data.Weather.stormAlert#phrase.action[1] = make it {storm alert} that {this} is storm alert
+pescha201.my_getting_started_4.my_service.data.Weather.stormAlert#phrase.action[1].deprecated = true
+pescha201.my_getting_started_4.my_service.data.Weather.stormAlert#phrase.navigation = {this} is storm alert
+pescha201.my_getting_started_4.my_service.data.Weather.stormAlert#phrase.negative_predicate = {this} is not storm alert
+pescha201.my_getting_started_4.my_service.data.Weather.stormAlert#phrase.negative_predicate_setter = {this} does not get storm alert
+pescha201.my_getting_started_4.my_service.data.Weather.stormAlert#phrase.positive_predicate_setter = {this} gets storm alert
+pescha201.my_getting_started_4.my_service.data.Weather.temperature#phrase.action = set the temperature of {this} to {temperature}
+pescha201.my_getting_started_4.my_service.data.Weather.temperature#phrase.clearer = clear the temperature of {this}
+pescha201.my_getting_started_4.my_service.data.Weather.temperature#phrase.navigation = {temperature} of {this}

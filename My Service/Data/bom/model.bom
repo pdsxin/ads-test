@@ -1,0 +1,52 @@
+
+package pescha201.my_getting_started_4.my_service.data;
+
+
+class Temperature
+        extends java.lang.Enum
+        property ads.typeId "1"
+        property com.fasterxml.jackson.annotation.JsonTypeName "temperature"
+        #de.generated
+{
+    domain {static cold, static hot, static warm}
+    static final readonly pescha201.my_getting_started_4.my_service.data.Temperature cold
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "cold";
+    static final readonly pescha201.my_getting_started_4.my_service.data.Temperature hot
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "hot";
+    static final readonly pescha201.my_getting_started_4.my_service.data.Temperature warm
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "warm";
+}
+
+class Weather
+        property ads.typeId "2"
+        property com.fasterxml.jackson.annotation.JsonTypeName "weather"
+        #de.generated
+{
+    long rainForecast
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "rainForecast"
+                #update;
+    string storm
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "storm"
+                #update;
+    boolean stormAlert
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "stormAlert"
+                #update;
+    pescha201.my_getting_started_4.my_service.data.Temperature temperature
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "temperature"
+                #update;
+    Weather(string storm, long rainForecast, boolean stormAlert, pescha201.my_getting_started_4.my_service.data.Temperature temperature)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    Weather()
+                #dataio.default;
+}
+
