@@ -33,6 +33,10 @@ class Weather
                 property ads.attributeId "4"
                 property com.fasterxml.jackson.annotation.JsonProperty "storm"
                 #update;
+    string snow
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "snow"
+                #update;
     boolean stormAlert
                 property ads.attributeId "3"
                 property com.fasterxml.jackson.annotation.JsonProperty "stormAlert"
