@@ -3,5 +3,5 @@
   <name>output-default-setting</name>
   <uuid>a833064c-bf3e-461a-a7b9-82a96158c7c7</uuid>
   <locale>en_US</locale>
-  <definition><![CDATA[set decision to "Sorry, we don't have enough information to provide a response." ;]]></definition>
+  <definition><![CDATA[set decision to "Sorry, we don't have enough information to provide an accurate response." ;]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>
