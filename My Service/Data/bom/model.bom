@@ -45,7 +45,7 @@ class Weather
                 property ads.attributeId "1"
                 property com.fasterxml.jackson.annotation.JsonProperty "temperature"
                 #update;
-    Weather(string storm, long rainForecast, boolean stormAlert, pescha201.my_getting_started_4.my_service.data.Temperature temperature)
+    Weather(string storm, long rainForecast, string snow, boolean stormAlert, pescha201.my_getting_started_4.my_service.data.Temperature temperature)
                 #autoExpand
                 #beanConstructor
                 property groups "BALA"
