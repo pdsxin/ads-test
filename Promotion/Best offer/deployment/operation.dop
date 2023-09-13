@@ -4,4 +4,13 @@
   <uuid>93ddd436-8d9d-4abe-ac22-e608ad4396c3</uuid>
   <decisionModel href="../rules/decisionModel.dmo#62548ec4-bd11-4982-9d39-49e30ef321eb"/>
   <targetRuleProject href="../../Best%20offer#8d02db4f-51b2-4cc9-9562-c267901ee1b0"/>
+  <tags key="operationDescription">
+    <value><![CDATA[""]]></value>
+  </tags>
+  <tags key="operationName">
+    <value><![CDATA["bestOffer"]]></value>
+  </tags>
+  <tags key="exposedAtRuntime">
+    <value><![CDATA[true]]></value>
+  </tags>
 </com.ibm.rules.studio.model.decisionservice:Operation>
