@@ -1,0 +1,39 @@
+
+# decisions.ads_lab.promotion.data.Customer
+decisions.ads_lab.promotion.data.Customer#concept.documentation = Customer record
+decisions.ads_lab.promotion.data.Customer#concept.label = customer
+decisions.ads_lab.promotion.data.Customer.Customer(double,java.lang.String,java.lang.String,double)#phrase.navigation = a new {customer} where {0, age} {1, name} {2, status} {3, spending}
+decisions.ads_lab.promotion.data.Customer.age#phrase.action = set the age of {this} to {age}
+decisions.ads_lab.promotion.data.Customer.age#phrase.addition_setter = add {age} to the age of {this}
+decisions.ads_lab.promotion.data.Customer.age#phrase.navigation = {age} of {this}
+decisions.ads_lab.promotion.data.Customer.age#phrase.subtraction_setter = subtract {age} from the age of {this}
+decisions.ads_lab.promotion.data.Customer.name#phrase.action = set the name of {this} to {name}
+decisions.ads_lab.promotion.data.Customer.name#phrase.navigation = {name} of {this}
+decisions.ads_lab.promotion.data.Customer.newAttribute#phrase.action = set the status of {this} to {status}
+decisions.ads_lab.promotion.data.Customer.newAttribute#phrase.navigation = {status} of {this}
+decisions.ads_lab.promotion.data.Customer.newAttribute1#phrase.action = set the spending of {this} to {spending}
+decisions.ads_lab.promotion.data.Customer.newAttribute1#phrase.addition_setter = add {spending} to the spending of {this}
+decisions.ads_lab.promotion.data.Customer.newAttribute1#phrase.navigation = {spending} of {this}
+decisions.ads_lab.promotion.data.Customer.newAttribute1#phrase.subtraction_setter = subtract {spending} from the spending of {this}
+
+# decisions.ads_lab.promotion.data.Offer
+decisions.ads_lab.promotion.data.Offer#concept.documentation = Contains promotion details
+decisions.ads_lab.promotion.data.Offer#concept.label = offer
+decisions.ads_lab.promotion.data.Offer.Offer(double)#phrase.navigation = a new {offer} where {0, discount}
+decisions.ads_lab.promotion.data.Offer.newAttribute#phrase.action = set the discount of {this} to {discount}
+decisions.ads_lab.promotion.data.Offer.newAttribute#phrase.addition_setter = add {discount} to the discount of {this}
+decisions.ads_lab.promotion.data.Offer.newAttribute#phrase.navigation = {discount} of {this}
+decisions.ads_lab.promotion.data.Offer.newAttribute#phrase.subtraction_setter = subtract {discount} from the discount of {this}
+
+# decisions.ads_lab.promotion.data.Product
+decisions.ads_lab.promotion.data.Product#concept.documentation = Product description
+decisions.ads_lab.promotion.data.Product#concept.label = product
+decisions.ads_lab.promotion.data.Product.Product(java.lang.String,double,java.lang.String)#phrase.navigation = a new {product} where {0, name} {1, price} {2, type}
+decisions.ads_lab.promotion.data.Product.name#phrase.action = set the name of {this} to {name}
+decisions.ads_lab.promotion.data.Product.name#phrase.navigation = {name} of {this}
+decisions.ads_lab.promotion.data.Product.price#phrase.action = set the price of {this} to {price}
+decisions.ads_lab.promotion.data.Product.price#phrase.addition_setter = add {price} to the price of {this}
+decisions.ads_lab.promotion.data.Product.price#phrase.navigation = {price} of {this}
+decisions.ads_lab.promotion.data.Product.price#phrase.subtraction_setter = subtract {price} from the price of {this}
+decisions.ads_lab.promotion.data.Product.type#phrase.action = set the type of {this} to {type}
+decisions.ads_lab.promotion.data.Product.type#phrase.navigation = {type} of {this}

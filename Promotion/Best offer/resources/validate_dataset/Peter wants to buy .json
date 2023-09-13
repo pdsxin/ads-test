@@ -1,0 +1,1 @@
+{"operationId":"93ddd436-8d9d-4abe-ac22-e608ad4396c3","body":{"customer":{"age":45,"name":"Peter","spending":600,"status":"gold"},"products":[{"name":"Mouse","price":25,"type":"Tech"}]}}

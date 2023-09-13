@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>aee5ed77-733b-49bf-b41c-9cd9056a31e8</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="diagram" namespace="">
+    <extensionElements>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <inputData id="node_0" name="Products">
+        <description>Product description (type, price, etc.)</description>
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="decisions.ads_lab.promotion.data.Product" collection="true" name="Products"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_0_ii" name="Products" typeRef="decisions.ads_lab.promotion.data.Product[]"/>
+    </inputData>
+    <decision id="node_1" name="Final Price">
+        <description>This is the final offer that may combine a discount and a coupon.</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="decisions.ads_lab.promotion.data.Offer" collection="false" name="loyalty promotion"/>
+                <input bomType="java.lang.Double" collection="false" name="Sum"/>
+                <output bomType="java.lang.Double" collection="false" name="Final Price"/>
+                <rule defaultRule="false" href="node_1/Standard%20offer.drl" kind="BusinessRule" name="Standard offer"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="Final Price" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_5"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_6"/>
+        </informationRequirement>
+    </decision>
+    <inputData id="node_2" name="customer">
+        <description>Customer details, such as age, status, etc.</description>
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="decisions.ads_lab.promotion.data.Customer" collection="false" name="customer"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_2_ii" name="customer" typeRef="decisions.ads_lab.promotion.data.Customer"/>
+    </inputData>
+    <decision id="node_5" name="loyalty promotion">
+        <description>This decision outputs a promotional offer based on customer information.</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="decisions.ads_lab.promotion.data.Customer" collection="false" name="customer"/>
+                <input bomType="java.lang.Double" collection="false" name="Sum"/>
+                <output bomType="decisions.ads_lab.promotion.data.Offer" collection="false" name="loyalty promotion"/>
+                <rule defaultRule="true" href="node_5/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+                <rule defaultRule="false" href="node_5/Status%20Prüfung.dmt" kind="DecisionTable" name="Status Prüfung"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_5_ii" name="loyalty promotion" typeRef="decisions.ads_lab.promotion.data.Offer"/>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_6"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_6" name="Sum">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="decisions.ads_lab.promotion.data.Product" collection="true" name="Products"/>
+                <output bomType="java.lang.Double" collection="false" name="Sum"/>
+                <rule defaultRule="false" href="node_6/initialuize.drl" kind="BusinessRule" name="initialuize"/>
+                <rule defaultRule="false" href="node_6/sum.drl" kind="BusinessRule" name="sum"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_6_ii" name="Sum" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+</definitions>
+</definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

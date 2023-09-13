@@ -1,0 +1,78 @@
+
+package decisions.ads_lab.promotion.data;
+
+
+class Customer
+        property ads.typeId "3"
+        property com.fasterxml.jackson.annotation.JsonTypeName "customer"
+        #de.generated
+{
+    double age
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "age"
+                #update;
+    string name
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "name"
+                #update;
+    string newAttribute
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "status"
+                #update;
+    double newAttribute1
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "spending"
+                #update;
+    Customer(double age, string name, string newAttribute, double newAttribute1)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    Customer()
+                #dataio.default;
+}
+
+class Offer
+        property ads.typeId "5"
+        property com.fasterxml.jackson.annotation.JsonTypeName "offer"
+        #de.generated
+{
+    double newAttribute
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "discount"
+                #update;
+    Offer(double newAttribute)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    Offer()
+                #dataio.default;
+}
+
+class Product
+        property ads.typeId "4"
+        property com.fasterxml.jackson.annotation.JsonTypeName "product"
+        #de.generated
+{
+    string name
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "name"
+                #update;
+    double price
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "price"
+                #update;
+    string type
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "type"
+                #update;
+    Product(string name, double price, string type)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    Product()
+                #dataio.default;
+}
+

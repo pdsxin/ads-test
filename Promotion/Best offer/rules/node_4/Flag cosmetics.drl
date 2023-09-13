@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Flag cosmetics</name>
+  <uuid>5925339a-b5eb-4312-9134-2cc2ca16f102</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    the type of product is "cosmetics"
+    and the age of customer is between 15 and 30
+    and the status of customer is "bronze"
+then
+    set decision to true ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

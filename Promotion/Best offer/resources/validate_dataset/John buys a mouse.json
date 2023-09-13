@@ -1,0 +1,16 @@
+{
+  "operationId" : "93ddd436-8d9d-4abe-ac22-e608ad4396c3",
+  "body" : {
+    "customer" : {
+      "age" : 20,
+      "name" : "John",
+      "status" : "bronze",
+      "spending" : 221
+    },
+    "product" : {
+      "name" : "Computer mouse",
+      "price" : 50,
+      "type" : "tech"
+    }
+  }
+}

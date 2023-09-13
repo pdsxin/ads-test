@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Best offer">
+  <name>bestOffer</name>
+  <uuid>93ddd436-8d9d-4abe-ac22-e608ad4396c3</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#62548ec4-bd11-4982-9d39-49e30ef321eb"/>
+  <targetRuleProject href="../../Best%20offer#8d02db4f-51b2-4cc9-9562-c267901ee1b0"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>
